@@ -11,41 +11,27 @@ class ViewController: UIViewController {
     
     
     
-    
-
     @IBOutlet weak var label: UILabel!
         
-    var counter = 0
+    var counter = 5
     
+
+
+    @IBAction func incrementButtonTapped(_ sender: Any)
+        {
+            if let sender = sender as? UIButton {
+                counter += sender.tag
+            }
+        }
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.text = ""
+        label.text = "\(counter)"
         label.layer.cornerRadius = 20
         label.clipsToBounds = true
 
     }
-
-    @IBAction func incrementButtonTapped(_ sender: Any) {
-        counter += 1
-        label.text = """
- Increment Button
- Tapped \(counter)
-"""
-    }
-    
-    @IBAction func decrementButtonTupped(_ sender: Any) {
-        counter -= 1
-        label.text = """
-     Decrement Button
-     Tapped \(counter)
-    """
-    }
-    
-    
-    
-    
-    
+        
     
 }
 
