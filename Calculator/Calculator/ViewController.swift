@@ -28,7 +28,7 @@ class ViewController: UIViewController {
     }
     @IBAction func operationButtonTupped(_ sender: UIButton) {
         
-        if display.text != "" && sender.tag != 10 && sender.tag != 15 { // check if any number is entered
+        if display.text != "" && sender.tag != 10 && sender.tag != 15 && sender.tag != 18 { // check if any number is entered
             firstNumberForOperations = Double(display.text!)! // remember the number on the screen
             
             if sender.tag == 11 { // del
@@ -75,10 +75,8 @@ class ViewController: UIViewController {
                 display.text = String(firstNumberForOperations / 100)
             }
             anyOperationsWereUsed = true
-            
         }
     }
-    
 }
 
 
