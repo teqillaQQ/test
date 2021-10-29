@@ -43,6 +43,12 @@ class ViewController: UIViewController {
             else if sender.tag == 14 { // +
                 display.text = "+"
             }
+            else if sender.tag == 17 { // %
+                display.text = "%"
+            }
+            else if sender.tag == 16 { // +-
+                display.text = "-\(numbersFromDisplay)"
+            }
             operation = sender.tag
             anyOperations = true
         }
@@ -64,6 +70,9 @@ class ViewController: UIViewController {
             }
             else if operation == 14 {
                 display.text = String(firstNumber + numbersFromDisplay)
+            }
+            else if operation == 17 {
+                display.text = String(firstNumber / 100)
             }
         }
     }

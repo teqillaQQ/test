@@ -33,7 +33,7 @@
                                     <action selector="numTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NXw-OV-90x"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T0-cX-IHh">
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1T0-cX-IHh">
                                 <rect key="frame" x="216.99999999999997" y="733.66666666666663" width="78.666666666666657" height="78.333333333333371"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -49,6 +49,9 @@
                                         <integer key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operatorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTX-ur-PwJ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pp-SS-uX9">
                                 <rect key="frame" x="315.66666666666669" y="733.66666666666663" width="78.333333333333314" height="78.333333333333371"/>
@@ -298,7 +301,7 @@
                                     <action selector="operatorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xj3-Pz-fAq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-Wa-RGB">
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-Wa-RGB">
                                 <rect key="frame" x="118.66666666666669" y="339.66666666666669" width="78.333333333333314" height="78.333333333333314"/>
                                 <color key="backgroundColor" red="0.52825128249447761" green="0.52825128249447761" blue="0.52825128249447761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -311,8 +314,11 @@
                                         <integer key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operatorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WXG-dL-kN6"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6I-cP-fDm">
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6I-cP-fDm">
                                 <rect key="frame" x="216.99999999999997" y="339.66666666666669" width="78.666666666666657" height="78.333333333333314"/>
                                 <color key="backgroundColor" red="0.52825128249447761" green="0.52825128249447761" blue="0.52825128249447761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -325,6 +331,9 @@
                                         <integer key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="operatorButtons:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y9z-uC-841"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-0N-gWV">
                                 <rect key="frame" x="315.66666666666669" y="339.66666666666669" width="78.333333333333314" height="78.333333333333314"/>
