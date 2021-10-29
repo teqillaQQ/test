@@ -8,28 +8,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-    var numbersFromDisplay: Double = 0
-    var firstNumber: Double = 0
-    var operation = 0
-    var anyOperations = false
+    var numberFromDisplay: Double = 0
+    var firstNumberForOperations: Double = 0
+    var tipeOfOperation = 0
+    var anyOperationsWereUsed = false
     
     @IBOutlet weak var display: UILabel!
     
-    @IBAction func numTapped(_ sender: UIButton) {
+    @IBAction func numButtonTapped(_ sender: UIButton) {
         
-        if anyOperations == true {
+        if anyOperationsWereUsed == true {
             display.text = String(sender.tag)
-            anyOperations = false
+            anyOperationsWereUsed = false
         }
         else {
             display.text = display.text! + String(sender.tag)
         }
-        numbersFromDisplay = Double(display.text!)!
+        numberFromDisplay = Double(display.text!)!
     }
-    @IBAction func operatorButtons(_ sender: UIButton) {
+    @IBAction func operationButtonTupped(_ sender: UIButton) {
         
-        if display.text != "" && sender.tag != 10 && sender.tag != 15 {
-            firstNumber = Double(display.text!)!
+        if display.text != "" && sender.tag != 10 && sender.tag != 15 { // check if any number is entered
+            firstNumberForOperations = Double(display.text!)! // remember the number on the screen
             
             if sender.tag == 11 { // del
                 display.text = "/"
@@ -47,33 +47,35 @@ class ViewController: UIViewController {
                 display.text = "%"
             }
             else if sender.tag == 16 { // +-
-                display.text = "-\(numbersFromDisplay)"
+                display.text = "-\(numberFromDisplay)"
             }
-            operation = sender.tag
-            anyOperations = true
+            tipeOfOperation = sender.tag // remember the type of the operator so that after the button is equal to display the result
+            anyOperationsWereUsed = true // math operators are used, the entered numbers will be on a new line
         }
         else if sender.tag == 10 { // AC
             display.text = ""
-            firstNumber = 0
-            operation = 0
-            numbersFromDisplay = 0
+            firstNumberForOperations = 0
+            tipeOfOperation = 0
+            numberFromDisplay = 0
         }
         else if sender.tag == 15 { // =
-            if operation == 11 {
-                display.text = String(firstNumber / numbersFromDisplay)
+            if tipeOfOperation == 11 {
+                display.text = String(firstNumberForOperations / numberFromDisplay)
             }
-            else if operation == 12 {
-                display.text = String(firstNumber * numbersFromDisplay)
+            else if tipeOfOperation == 12 {
+                display.text = String(firstNumberForOperations * numberFromDisplay)
             }
-            else if operation == 13 {
-                display.text = String(firstNumber - numbersFromDisplay)
+            else if tipeOfOperation == 13 {
+                display.text = String(firstNumberForOperations - numberFromDisplay)
             }
-            else if operation == 14 {
-                display.text = String(firstNumber + numbersFromDisplay)
+            else if tipeOfOperation == 14 {
+                display.text = String(firstNumberForOperations + numberFromDisplay)
             }
-            else if operation == 17 {
-                display.text = String(firstNumber / 100)
+            else if tipeOfOperation == 17 {
+                display.text = String(firstNumberForOperations / 100)
             }
+            anyOperationsWereUsed = true
+            
         }
     }
     
