@@ -2,17 +2,7 @@
 
 import UIKit
 
-enum BinaryOperand: Int {
-    case multiply = 100 // умножить
-    case divide = 101 // поделить
-    case sum = 102 // сложить
-    case substruct = 103 // вычесть
-}
 
-enum UnaryOperand: Int {
-    case percent = 201
-    case invert = 202
-}
 var selectButton = BinaryOperatorButton()
 class StoryboardedCalculatorViewController: UIViewController {
     
@@ -51,7 +41,7 @@ class StoryboardedCalculatorViewController: UIViewController {
     }
     
     func setup() {
-        displayText = Self.initialValueString
+        displayText = Self.initialValueString //?
     }
     
     // MARK: - IBActions
@@ -222,13 +212,13 @@ class StoryboardedCalculatorViewController: UIViewController {
         return formatter.string(from: NSNumber(value: value)) ?? String(value)
     }
     func perekrasitStart() {
-    changeColor.backgroundColor = selectButton.backgroundColor
+        changeColor.backgroundColor = selectButton.backgroundColor
         changeColor.setTitleColor(.white, for: .normal)
-    changeColor2.backgroundColor = selectButton.backgroundColor
+        changeColor2.backgroundColor = selectButton.backgroundColor
         changeColor2.setTitleColor(.white, for: .normal)
-    changeColor3.backgroundColor = selectButton.backgroundColor
+        changeColor3.backgroundColor = selectButton.backgroundColor
         changeColor3.setTitleColor(.white, for: .normal)
-    changeColor4.backgroundColor = selectButton.backgroundColor
+        changeColor4.backgroundColor = selectButton.backgroundColor
         changeColor4.setTitleColor(.white, for: .normal)
-}
+    }
 }
