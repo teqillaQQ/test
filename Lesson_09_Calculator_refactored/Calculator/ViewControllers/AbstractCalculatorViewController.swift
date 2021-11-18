@@ -1,9 +1,4 @@
-//
-//  AbstractCalculatorViewController.swift
-//  Calculator
-//
-//  Created by Nickolai Nikishin on 13.11.21.
-//
+
 
 import UIKit
 
