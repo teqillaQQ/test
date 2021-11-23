@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  StudentListCodTable
+//  studentListCod
 //
-//  Created by Александр Савков on 17.11.21.
+//  Created by Александр Савков on 19.11.21.
 //
 
 import UIKit
