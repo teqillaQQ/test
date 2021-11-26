@@ -2,7 +2,13 @@
 
 import UIKit
 
+protocol ViewControllerDlegate {
+    func didSelectedStudent(_ studentName: String)
+}
+
 class MainTableViewController: UITableViewController {
+    
+    var delegate: ViewControllerDlegate?
     
     private let studentList = [
         Students(name: "Aртимович Игорь Владимирович", gender: .guys),
@@ -63,6 +69,7 @@ class MainTableViewController: UITableViewController {
         searchController.searchBar.placeholder = "Search"
         navigationItem.searchController = searchController
         definesPresentationContext = true
+        
     }
     
     // MARK: - Table view data source
@@ -123,6 +130,11 @@ class MainTableViewController: UITableViewController {
                 detailVC.student = student
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let studentName = String()
     }
 }
 

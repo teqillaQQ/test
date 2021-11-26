@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4E0A4E274E7FB800D3A247 /* StudentCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4E0A4D274E7FB800D3A247 /* StudentCellViewController.swift */; };
 		A840EE5221C77A73006B2289 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840EE5121C77A73006B2289 /* AppDelegate.swift */; };
 		A840EE5721C77A73006B2289 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A840EE5521C77A73006B2289 /* Main.storyboard */; };
 		A840EE5921C77A74006B2289 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A840EE5821C77A74006B2289 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E4E0A4D274E7FB800D3A247 /* StudentCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellViewController.swift; sourceTree = "<group>"; };
 		A840EE4E21C77A73006B2289 /* StudentList2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A840EE5121C77A73006B2289 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A840EE5621C77A73006B2289 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,8 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				A840EE5121C77A73006B2289 /* AppDelegate.swift */,
-				A840EE6321C77ACB006B2289 /* MainTableViewController.swift */,
 				A840EE6521C77D23006B2289 /* DetailViewController.swift */,
+				A840EE6321C77ACB006B2289 /* MainTableViewController.swift */,
+				2E4E0A4D274E7FB800D3A247 /* StudentCellViewController.swift */,
 				A840EE6721C77EBD006B2289 /* Students.swift */,
 				A840EE5521C77A73006B2289 /* Main.storyboard */,
 				A840EE5821C77A74006B2289 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A840EE6621C77D23006B2289 /* DetailViewController.swift in Sources */,
+				2E4E0A4E274E7FB800D3A247 /* StudentCellViewController.swift in Sources */,
 				A840EE6421C77ACC006B2289 /* MainTableViewController.swift in Sources */,
 				A840EE5221C77A73006B2289 /* AppDelegate.swift in Sources */,
 				A840EE6821C77EBD006B2289 /* Students.swift in Sources */,

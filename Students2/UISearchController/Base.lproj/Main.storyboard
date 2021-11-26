@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JIz-y8-PYM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Xgd-eF-5nw">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Students-->
         <scene sceneID="cgT-eN-d8H">
             <objects>
-                <tableViewController id="naE-5L-5sI" userLabel="Students" customClass="MainTableViewController" customModule="UISearchController" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainTableViewController" id="naE-5L-5sI" userLabel="Students" customClass="MainTableViewController" customModule="StudentList2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Xbe-Iq-rk2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,14 +41,12 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="nPu-8x-Fzd" kind="show" identifier="showDetail" id="DGt-gy-HJj"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="naE-5L-5sI" id="m6h-OR-nBe"/>
                             <outlet property="delegate" destination="naE-5L-5sI" id="uOe-hb-P49"/>
+                            <outlet property="prefetchDataSource" destination="naE-5L-5sI" id="VlR-WD-hiM"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Студенты" largeTitleDisplayMode="never" id="1Y4-oG-IEc"/>
@@ -59,13 +58,13 @@
         <!--Student Name-->
         <scene sceneID="iXX-eH-rTM">
             <objects>
-                <viewController id="nPu-8x-Fzd" customClass="DetailViewController" customModule="UISearchController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="student" id="nPu-8x-Fzd" customClass="DetailViewController" customModule="StudentList2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oqy-ap-p74">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V7k-Cz-MId" userLabel="Student Image">
-                                <rect key="frame" x="16" y="156" width="343" height="300"/>
+                                <rect key="frame" x="16" y="60" width="343" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="300" id="gDj-vf-VJP"/>
                                 </constraints>
@@ -88,6 +87,35 @@
             </objects>
             <point key="canvasLocation" x="1081" y="128"/>
         </scene>
+        <!--Student Cell View Controller-->
+        <scene sceneID="ZWq-u2-cC5">
+            <objects>
+                <viewController storyboardIdentifier="StudentCellViewController" id="Xgd-eF-5nw" customClass="StudentCellViewController" customModule="StudentList2_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4y-gY-W9H">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fct-xD-CiP">
+                                <rect key="frame" x="160" y="338" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="sellectButtonTupped:" destination="Xgd-eF-5nw" eventType="touchUpInside" id="J9h-Tw-oxk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pYE-jE-e9O"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="selectButton" destination="Fct-xD-CiP" id="355-mc-Il0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8I-Hm-cn9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1809" y="128"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="nku-YV-t4w">
             <objects>
@@ -96,13 +124,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="naE-5L-5sI" kind="relationship" relationship="rootViewController" id="ctj-Hs-RQB"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qi3-nQ-NCy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-390" y="129"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
