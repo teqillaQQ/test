@@ -11,6 +11,14 @@ class SectStudentViewController: UIViewController, UITableViewDelegate {
     
     @IBOutlet weak var secondTable: UITableView!
     @IBOutlet weak var selectButton: UIButton!
+    
+    @IBAction func editTapped(_ sender: UIBarButtonItem) {
+        if secondTable.isEditing {
+            secondTable.isEditing = false
+        } else {
+            secondTable.isEditing = true
+        }
+    }
     @IBAction func selectButtonTupped(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
             return
@@ -53,12 +61,13 @@ extension SectStudentViewController: UITableViewDataSource {
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
         }
     }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
+    }
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let moveStudent = sellectedStudent[sourceIndexPath.row]
         sellectedStudent.remove(at: sourceIndexPath.row)
         sellectedStudent.insert(moveStudent, at: destinationIndexPath.row)
-    }
-    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        true
+        print(sellectedStudent)
     }
 }
