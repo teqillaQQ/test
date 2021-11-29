@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E697D2F2750DB9F00939D59 /* SectStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E697D2E2750DB9F00939D59 /* SectStudentViewController.swift */; };
+		2E8349982752918B0087353B /* StudentCellSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8349972752918B0087353B /* StudentCellSecondTableViewCell.swift */; };
 		CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB3FE2744258900A7510F /* AppDelegate.swift */; };
 		CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4002744258900A7510F /* SceneDelegate.swift */; };
 		CC1CB4032744258900A7510F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4022744258900A7510F /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		2E697D2E2750DB9F00939D59 /* SectStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectStudentViewController.swift; sourceTree = "<group>"; };
+		2E8349972752918B0087353B /* StudentCellSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellSecondTableViewCell.swift; sourceTree = "<group>"; };
 		CC1CB3FB2744258900A7510F /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1CB3FE2744258900A7510F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1CB4002744258900A7510F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E8349992752919E0087353B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC1CB438274AB48E00A7510F /* StudentCell.swift */,
+				2E8349972752918B0087353B /* StudentCellSecondTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		CC1CB3F22744258900A7510F = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +76,7 @@
 				2E697D2E2750DB9F00939D59 /* SectStudentViewController.swift */,
 				CC1CB4022744258900A7510F /* ViewController.swift */,
 				CC1CB4042744258900A7510F /* Main.storyboard */,
-				CC1CB438274AB48E00A7510F /* StudentCell.swift */,
+				2E8349992752919E0087353B /* Cell */,
 				CC1CB4072744259000A7510F /* Assets.xcassets */,
 				CC1CB4092744259000A7510F /* LaunchScreen.storyboard */,
 				CC1CB40C2744259000A7510F /* Info.plist */,
@@ -145,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC1CB439274AB48E00A7510F /* StudentCell.swift in Sources */,
+				2E8349982752918B0087353B /* StudentCellSecondTableViewCell.swift in Sources */,
 				2E697D2F2750DB9F00939D59 /* SectStudentViewController.swift in Sources */,
 				CC1CB4032744258900A7510F /* ViewController.swift in Sources */,
 				CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */,

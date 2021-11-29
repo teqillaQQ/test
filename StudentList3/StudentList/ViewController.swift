@@ -2,7 +2,7 @@
 
 import UIKit
 
-protocol ViewControllerDelegate {
+protocol ViewControllerDelegate: AnyObject {
     func didSelectedStudentCell(_ nameStudent: String)
 }
 
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
                 "Артимович Игорь Владимирович"
     ].sorted()
     
-    var delegate: ViewControllerDelegate?
+   weak var delegate: ViewControllerDelegate?
     var filteredMen: [String] = []
     var filteredWomen: [String] = []
     
@@ -107,7 +107,6 @@ extension ViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "StudentCell", for: indexPath) as! StudentCell
         cell.nameLabel.text = dataSource[indexPath.section][indexPath.row]
-        
         return cell
     }
 }

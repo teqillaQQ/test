@@ -7,27 +7,58 @@
 
 import UIKit
 
-class SectStudentViewController: UIViewController {
-
+class SectStudentViewController: UIViewController, UITableViewDelegate {
     
+    @IBOutlet weak var secondTable: UITableView!
     @IBOutlet weak var selectButton: UIButton!
     @IBAction func selectButtonTupped(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
             return
         }
         vc.delegate = self
-        
         present(vc, animated: true, completion: nil)
     }
     
+    var sellectedStudent: [String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        secondTable.dataSource = self
+        secondTable.delegate = self
     }
-    
 }
 extension SectStudentViewController: ViewControllerDelegate {
     func didSelectedStudentCell(_ nameStudent: String) {
         selectButton.setTitle(nameStudent, for: .normal)
         dismiss(animated: true, completion: nil)
+        if sellectedStudent.contains(nameStudent) { print("выбранный студент уже в массиве") }
+        else {
+            sellectedStudent.append(nameStudent) }
+        secondTable.reloadData()
+    }
+}
+extension SectStudentViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(sellectedStudent.count)
+        return sellectedStudent.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "secondCell", for: indexPath) as! StudentCellSecondTableViewCell
+        cell.nameLabel2.text = sellectedStudent[indexPath.row]
+        return cell
+    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            sellectedStudent.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+    }
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let moveStudent = sellectedStudent[sourceIndexPath.row]
+        sellectedStudent.remove(at: sourceIndexPath.row)
+        sellectedStudent.insert(moveStudent, at: destinationIndexPath.row)
+    }
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        true
     }
 }

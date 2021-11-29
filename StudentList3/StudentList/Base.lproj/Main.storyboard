@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DuL-UD-KEH">
-                                <rect key="frame" x="38.5" y="413" width="337" height="70"/>
+                                <rect key="frame" x="38.5" y="767" width="337" height="70"/>
                                 <color key="backgroundColor" red="0.90617108585858586" green="0.90617108585858586" blue="0.90617108585858586" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="Gvt-eD-kmM"/>
@@ -107,15 +107,55 @@
                                     <action selector="selectButtonTupped:" destination="h2z-IC-dPr" eventType="touchUpInside" id="AoN-4N-WhP"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="EYX-Q4-AV4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCell" id="Te3-3g-EGo" userLabel="TableViewCell" customClass="StudentCellSecondTableViewCell" customModule="StudentList" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Te3-3g-EGo" id="21M-XS-PF1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-pT-yFu">
+                                                    <rect key="frame" x="30" y="21" width="354" height="21.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="fnT-pT-yFu" secondAttribute="bottom" constant="10" id="838-Ta-hTI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="fnT-pT-yFu" secondAttribute="trailing" constant="10" id="LHX-zb-pNg"/>
+                                                <constraint firstItem="fnT-pT-yFu" firstAttribute="top" secondItem="21M-XS-PF1" secondAttribute="topMargin" constant="10" id="jJM-vD-De4"/>
+                                                <constraint firstItem="fnT-pT-yFu" firstAttribute="leading" secondItem="21M-XS-PF1" secondAttribute="leadingMargin" constant="10" id="qDL-K2-jCS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel2" destination="fnT-pT-yFu" id="aLi-6B-VDT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="h2z-IC-dPr" id="VPf-j3-IQi"/>
+                                    <outlet property="delegate" destination="h2z-IC-dPr" id="ZWi-Ir-Gyg"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ac7-AG-fIh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="DuL-UD-KEH" firstAttribute="centerY" secondItem="nU3-H2-EWa" secondAttribute="centerY" id="INI-7U-PIi"/>
+                            <constraint firstItem="DuL-UD-KEH" firstAttribute="top" secondItem="EYX-Q4-AV4" secondAttribute="bottom" constant="20" id="HMf-GX-l4s"/>
+                            <constraint firstItem="Ac7-AG-fIh" firstAttribute="trailing" secondItem="EYX-Q4-AV4" secondAttribute="trailing" id="ZUm-pu-aQp"/>
+                            <constraint firstItem="EYX-Q4-AV4" firstAttribute="leading" secondItem="Ac7-AG-fIh" secondAttribute="leading" id="h9N-0H-76L"/>
+                            <constraint firstItem="Ac7-AG-fIh" firstAttribute="bottom" secondItem="DuL-UD-KEH" secondAttribute="bottom" constant="25" id="jwq-LT-RBM"/>
+                            <constraint firstItem="EYX-Q4-AV4" firstAttribute="top" secondItem="Ac7-AG-fIh" secondAttribute="top" id="lcK-me-w7J"/>
                             <constraint firstItem="DuL-UD-KEH" firstAttribute="centerX" secondItem="nU3-H2-EWa" secondAttribute="centerX" id="rI2-ui-blq"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="secondTable" destination="EYX-Q4-AV4" id="LFc-ZF-5kF"/>
                         <outlet property="selectButton" destination="DuL-UD-KEH" id="5lI-NU-kOS"/>
                     </connections>
                 </viewController>
