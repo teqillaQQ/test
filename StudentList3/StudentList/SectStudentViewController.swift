@@ -39,7 +39,12 @@ extension SectStudentViewController: ViewControllerDelegate {
     func didSelectedStudentCell(_ nameStudent: String) {
         selectButton.setTitle(nameStudent, for: .normal)
         dismiss(animated: true, completion: nil)
-        if sellectedStudent.contains(nameStudent) { print("выбранный студент уже в массиве") }
+        if sellectedStudent.contains(nameStudent) {
+            let alert = UIAlertController(title: "Внимание", message: "выбранный студент уже в массиве", preferredStyle: .alert)
+            let alertBtn = UIAlertAction(title: "Ок", style: .default, handler: nil)
+            alert.addAction(alertBtn)
+            present(alert, animated: true, completion: nil)
+            print("выбранный студент уже в массиве") }
         else {
             sellectedStudent.append(nameStudent) }
         secondTable.reloadData()

@@ -4,6 +4,7 @@ import UIKit
 
 protocol ViewControllerDelegate: AnyObject {
     func didSelectedStudentCell(_ nameStudent: String)
+    
 }
 
 class ViewController: UIViewController {
@@ -55,8 +56,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.keyboardDismissMode = .onDrag
         filterText = nil
-        
-        
     }
     
     // MARK: - Functions
@@ -119,9 +118,7 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
         tableView.deselectRow(at: indexPath, animated: true)
-        
         let nameStudent = String(dataSource[indexPath.section][indexPath.row])
-        
         delegate?.didSelectedStudentCell(nameStudent)
         print("\(nameStudent)")
     }
