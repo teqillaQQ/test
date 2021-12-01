@@ -64,6 +64,7 @@ extension SectStudentViewController: UITableViewDataSource {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             sellectedStudent.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            print(sellectedStudent)
         }
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
