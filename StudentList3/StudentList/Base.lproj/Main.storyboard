@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="928.98550724637687" y="68.973214285714278"/>
+            <point key="canvasLocation" x="3654" y="-669"/>
         </scene>
         <!--Sect Student View Controller-->
         <scene sceneID="K3E-q4-TaQ">
@@ -112,14 +112,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="secondCell" id="Te3-3g-EGo" userLabel="TableViewCell" customClass="StudentCellSecondTableViewCell" customModule="StudentList" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="63.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Te3-3g-EGo" id="21M-XS-PF1">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnT-pT-yFu">
-                                                    <rect key="frame" x="30" y="21" width="354" height="21"/>
+                                                    <rect key="frame" x="30" y="21" width="354" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -171,6 +171,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsY-3E-C2K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3653.6231884057975" y="68.973214285714278"/>
+        </scene>
+        <!--Detail Student View Controller-->
+        <scene sceneID="mrv-mA-zOh">
+            <objects>
+                <viewController storyboardIdentifier="DetailStudentViewController" id="H21-jd-QBQ" customClass="DetailStudentViewController" customModule="StudentList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ndj-hi-gt5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3G-zH-G2r">
+                                <rect key="frame" x="10" y="64" width="394" height="148"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BSb-Zu-Zwm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BSb-Zu-Zwm" firstAttribute="bottom" secondItem="H3G-zH-G2r" secondAttribute="bottom" constant="650" id="EMm-q8-zAp"/>
+                            <constraint firstItem="BSb-Zu-Zwm" firstAttribute="trailing" secondItem="H3G-zH-G2r" secondAttribute="trailing" constant="10" id="ZaQ-FB-xlN"/>
+                            <constraint firstItem="H3G-zH-G2r" firstAttribute="top" secondItem="BSb-Zu-Zwm" secondAttribute="top" constant="20" id="l3Y-EG-KYd"/>
+                            <constraint firstItem="H3G-zH-G2r" firstAttribute="leading" secondItem="BSb-Zu-Zwm" secondAttribute="leading" constant="10" id="yTy-eV-iVM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="detailStudentLabel" destination="H3G-zH-G2r" id="MWB-0b-yaz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="34X-nb-vT0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4484" y="69"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uJg-jj-iSu">
