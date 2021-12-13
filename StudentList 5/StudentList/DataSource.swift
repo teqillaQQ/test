@@ -2,16 +2,16 @@
 
 import Foundation
 
-struct Student {
-    var name: String
-    var phone: String
-    var githubURL: String
-    
-    mutating func resetName() {
-        name = ""
-    }
-    
-}
+//struct Student {
+//    var name: String
+//    var phone: String
+//    var githubURL: String
+//    
+//    mutating func resetName() {
+//        name = ""
+//    }
+//    
+//}
 
 struct DataSource {
     static let menArray =

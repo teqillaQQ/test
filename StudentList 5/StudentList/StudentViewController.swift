@@ -8,7 +8,7 @@ protocol StudentViewControllerDelegate: AnyObject {
 
 class StudentViewController: UIViewController {
     
-   var memoryManager = Memory()
+   var memoryManager = MemoryCoreData()
     
     private lazy var tableView = UITableView()
     private lazy var selectButton = UIButton(type: .custom)
@@ -20,8 +20,8 @@ class StudentViewController: UIViewController {
     weak var delegate: StudentViewControllerDelegate?
     var didSelectStudentClosure: ((String, Int, UIViewController) -> ())?
 
-    lazy var women: [String] = { Memory().loadWomen()() }()
-    lazy var men: [String] = { Memory().loadMen() }()
+    lazy var women: [String] = { MemoryCoreData().loadWomen() }()
+    lazy var men: [String] = { MemoryCoreData().loadMen() }()
     
     private var filteredMen: [String] = []
     private var filteredWomen: [String] = []

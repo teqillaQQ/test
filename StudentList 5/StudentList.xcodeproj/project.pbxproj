@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E80BFBF275CC77300D97382 /* MemoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BFBE275CC77300D97382 /* MemoryManager.swift */; };
 		2E80BFE8275E38FC00D97382 /* StudentList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E80BFE6275E38FC00D97382 /* StudentList.xcdatamodeld */; };
+		2EF84A5227675C670062B202 /* MemoryManagerCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF84A5127675C670062B202 /* MemoryManagerCoreData.swift */; };
 		CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB3FE2744258900A7510F /* AppDelegate.swift */; };
 		CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4002744258900A7510F /* SceneDelegate.swift */; };
 		CC1CB4032744258900A7510F /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4022744258900A7510F /* StudentViewController.swift */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		2E80BFBE275CC77300D97382 /* MemoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManager.swift; sourceTree = "<group>"; };
 		2E80BFE7275E38FC00D97382 /* StudentList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StudentList.xcdatamodel; sourceTree = "<group>"; };
+		2EF84A5127675C670062B202 /* MemoryManagerCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryManagerCoreData.swift; sourceTree = "<group>"; };
 		CC1CB3FB2744258900A7510F /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1CB3FE2744258900A7510F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1CB4002744258900A7510F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				CC1CB3FE2744258900A7510F /* AppDelegate.swift */,
 				CC1CB4002744258900A7510F /* SceneDelegate.swift */,
 				2E80BFBE275CC77300D97382 /* MemoryManager.swift */,
+				2EF84A5127675C670062B202 /* MemoryManagerCoreData.swift */,
 				CC1CB4022744258900A7510F /* StudentViewController.swift */,
 				D29758EE275387E800D2A483 /* DataSource.swift */,
 				CC1CB438274AB48E00A7510F /* StudentCell.swift */,
@@ -151,6 +154,7 @@
 				2E80BFBF275CC77300D97382 /* MemoryManager.swift in Sources */,
 				CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */,
 				2E80BFE8275E38FC00D97382 /* StudentList.xcdatamodeld in Sources */,
+				2EF84A5227675C670062B202 /* MemoryManagerCoreData.swift in Sources */,
 				D29758EF275387E800D2A483 /* DataSource.swift in Sources */,
 				CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */,
 			);
