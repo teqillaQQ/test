@@ -9,7 +9,7 @@ import UIKit
 
 class SectStudentViewController: UIViewController, UITableViewDelegate {
     
-   
+    var memoryManager = MemoryCoreData()
     
     @IBOutlet weak var secondTable: UITableView!
     @IBOutlet weak var selectButton: UIButton!
@@ -29,7 +29,8 @@ class SectStudentViewController: UIViewController, UITableViewDelegate {
         present(vc, animated: true, completion: nil)
     }
     
-    var sellectedStudent: [String] = []
+    var sellectedStudentMen: [String] = { MemoryCoreData().loadMen() }()
+    var sellectedStudentWomen: [String] = { MemoryCoreData().loadWomen() }()
     
     override func viewDidLoad() {
         super.viewDidLoad()

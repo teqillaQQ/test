@@ -11,6 +11,7 @@
 		2E6A2FE5275A25C000161887 /* DetailStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6A2FE4275A25C000161887 /* DetailStudentViewController.swift */; };
 		2E8349982752918B0087353B /* StudentCellSecondTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8349972752918B0087353B /* StudentCellSecondTableViewCell.swift */; };
 		2E8F9E67275AD54E00F764F6 /* StudentJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8F9E66275AD54E00F764F6 /* StudentJoke.swift */; };
+		2EF84A772767921C0062B202 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EF84A762767921C0062B202 /* CoreData.swift */; };
 		CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB3FE2744258900A7510F /* AppDelegate.swift */; };
 		CC1CB4012744258900A7510F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4002744258900A7510F /* SceneDelegate.swift */; };
 		CC1CB4032744258900A7510F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1CB4022744258900A7510F /* ViewController.swift */; };
@@ -25,6 +26,7 @@
 		2E6A2FE4275A25C000161887 /* DetailStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailStudentViewController.swift; sourceTree = "<group>"; };
 		2E8349972752918B0087353B /* StudentCellSecondTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentCellSecondTableViewCell.swift; sourceTree = "<group>"; };
 		2E8F9E66275AD54E00F764F6 /* StudentJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentJoke.swift; sourceTree = "<group>"; };
+		2EF84A762767921C0062B202 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		CC1CB3FB2744258900A7510F /* StudentList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StudentList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1CB3FE2744258900A7510F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC1CB4002744258900A7510F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				CC1CB3FE2744258900A7510F /* AppDelegate.swift */,
 				CC1CB4002744258900A7510F /* SceneDelegate.swift */,
+				2EF84A762767921C0062B202 /* CoreData.swift */,
 				2E8F9E66275AD54E00F764F6 /* StudentJoke.swift */,
 				2E6A2FE32758F06800161887 /* ViewControllers */,
 				2E8349992752919E0087353B /* Cell */,
@@ -173,6 +176,7 @@
 				CC1CB439274AB48E00A7510F /* StudentCell.swift in Sources */,
 				2E8349982752918B0087353B /* StudentCellSecondTableViewCell.swift in Sources */,
 				2E697D2F2750DB9F00939D59 /* SectStudentViewController.swift in Sources */,
+				2EF84A772767921C0062B202 /* CoreData.swift in Sources */,
 				2E8F9E67275AD54E00F764F6 /* StudentJoke.swift in Sources */,
 				CC1CB4032744258900A7510F /* ViewController.swift in Sources */,
 				CC1CB3FF2744258900A7510F /* AppDelegate.swift in Sources */,

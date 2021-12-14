@@ -1,5 +1,5 @@
 //
-//  MemoryManagerCoreData.swift
+//  CoreData.swift
 //  StudentList
 //
 //  Created by Александр Савков on 13.12.21.
@@ -12,7 +12,6 @@ class MemoryCoreData {
     
     func saveData (menList: [String]?, womenList: [String]?) {
         clearData()
-        saveContext ()
         saveMenList(menList)
         saveWomenList(womenList)
     }
@@ -44,7 +43,7 @@ class MemoryCoreData {
             print("Unable to Student, \(error)")
         }
     }
-     func loadMen () -> [String] {
+    func loadMen () -> [String] {
         
             let fetchRequest = NSFetchRequest<Student>(entityName: "Student")
             fetchRequest.predicate = NSPredicate(format: "gender == 0")
@@ -85,7 +84,6 @@ class MemoryCoreData {
                 context.delete(object)
                 }
             }
-        
         }
     
     lazy var persistentContainer: NSPersistentContainer = {
@@ -131,3 +129,4 @@ class MemoryCoreData {
         }
     }
 }
+
