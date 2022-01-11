@@ -53,6 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E5921ED278B72D700EB4C0A /* Memory */ = {
+			isa = PBXGroup;
+			children = (
+				2E80BFBE275CC77300D97382 /* MemoryManager.swift */,
+				2EF84A5127675C670062B202 /* MemoryManagerCoreData.swift */,
+				2EFD96E7277720E7001FC933 /* MemoryManagerRealm.swift */,
+				2EFD96E927773090001FC933 /* StudentManager.swift */,
+			);
+			path = Memory;
+			sourceTree = "<group>";
+		};
 		CC1CB3F22744258900A7510F = {
 			isa = PBXGroup;
 			children = (
@@ -74,10 +85,7 @@
 			children = (
 				CC1CB3FE2744258900A7510F /* AppDelegate.swift */,
 				CC1CB4002744258900A7510F /* SceneDelegate.swift */,
-				2E80BFBE275CC77300D97382 /* MemoryManager.swift */,
-				2EF84A5127675C670062B202 /* MemoryManagerCoreData.swift */,
-				2EFD96E7277720E7001FC933 /* MemoryManagerRealm.swift */,
-				2EFD96E927773090001FC933 /* StudentManager.swift */,
+				2E5921ED278B72D700EB4C0A /* Memory */,
 				CC1CB4022744258900A7510F /* StudentViewController.swift */,
 				D29758EE275387E800D2A483 /* DataSource.swift */,
 				CC1CB438274AB48E00A7510F /* StudentCell.swift */,

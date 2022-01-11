@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E5921E6278B6B0D00EB4C0A /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5921E5278B6B0D00EB4C0A /* CollectionViewController.swift */; };
+		2E5921EC278B712300EB4C0A /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E5921EA278B712300EB4C0A /* ImageCollectionViewCell.xib */; };
+		2E5921EF278B7DA200EB4C0A /* CastomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5921EE278B7DA200EB4C0A /* CastomCollectionViewCell.swift */; };
 		2E6259FF27845E9A008A6474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E6259FE27845E9A008A6474 /* AppDelegate.swift */; };
 		2E625A0327845E9A008A6474 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E625A0227845E9A008A6474 /* ViewController.swift */; };
 		2E625A0827845E9B008A6474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E625A0727845E9B008A6474 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E5921E5278B6B0D00EB4C0A /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		2E5921EA278B712300EB4C0A /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		2E5921EE278B7DA200EB4C0A /* CastomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastomCollectionViewCell.swift; sourceTree = "<group>"; };
 		2E6259FB27845E9A008A6474 /* netCatDogAndOtherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netCatDogAndOtherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E6259FE27845E9A008A6474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E625A0227845E9A008A6474 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +63,9 @@
 				2E6259FE27845E9A008A6474 /* AppDelegate.swift */,
 				2E625A0227845E9A008A6474 /* ViewController.swift */,
 				2E625A122784607C008A6474 /* SecondViewController.swift */,
+				2E5921E5278B6B0D00EB4C0A /* CollectionViewController.swift */,
+				2E5921EE278B7DA200EB4C0A /* CastomCollectionViewCell.swift */,
+				2E5921EA278B712300EB4C0A /* ImageCollectionViewCell.xib */,
 				2E625A0727845E9B008A6474 /* Assets.xcassets */,
 				2E625A0927845E9B008A6474 /* LaunchScreen.storyboard */,
 				2E625A0C27845E9B008A6474 /* Info.plist */,
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E625A0B27845E9B008A6474 /* LaunchScreen.storyboard in Resources */,
+				2E5921EC278B712300EB4C0A /* ImageCollectionViewCell.xib in Resources */,
 				2E625A0827845E9B008A6474 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5921E6278B6B0D00EB4C0A /* CollectionViewController.swift in Sources */,
 				2E625A132784607C008A6474 /* SecondViewController.swift in Sources */,
 				2E625A0327845E9A008A6474 /* ViewController.swift in Sources */,
 				2E6259FF27845E9A008A6474 /* AppDelegate.swift in Sources */,
+				2E5921EF278B7DA200EB4C0A /* CastomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +294,7 @@
 				INFOPLIST_FILE = netCatDogAndOtherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -309,6 +322,7 @@
 				INFOPLIST_FILE = netCatDogAndOtherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
