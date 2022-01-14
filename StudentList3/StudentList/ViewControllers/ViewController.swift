@@ -4,7 +4,6 @@ import UIKit
 
 protocol ViewControllerDelegate: AnyObject {
     func didSelectedStudentCell(_ nameStudent: String)
-    
 }
 
 class ViewController: UIViewController {

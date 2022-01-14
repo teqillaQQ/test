@@ -41,7 +41,7 @@ class ViewController: UIViewController {
     @objc func presentPhotoButtonTupped() {
         print("Show the cat")
         let vc = SecondViewController()
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func showImage() {
@@ -52,7 +52,6 @@ class ViewController: UIViewController {
             
         }
     }
-    
 }
 
 extension ViewController {
