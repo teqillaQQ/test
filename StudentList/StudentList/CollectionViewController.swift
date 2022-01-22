@@ -23,7 +23,7 @@ class CollectionViewController: UIViewController {
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 30
         layout.minimumInteritemSpacing = 30
-        layout.itemSize = CGSize(width: (view.frame.size.width * 0.68) - 4,
+        layout.itemSize = CGSize(width: (view.frame.size.width * 0.48) - 4,
                                height: (view.frame.size.height * 0.275) - 4)
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         guard let collectionView = collectionView else {

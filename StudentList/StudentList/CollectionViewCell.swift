@@ -51,15 +51,4 @@ class CollectionViewCell: UICollectionViewCell {
                                 width: contentView.frame.size.width - 10,
                                 height: contentView.frame.size.height - myLabel.frame.size.height - 10)
     }
-    
-//    public func configure(label: String, image: String) {
-//        myLabel.text = label
-//        myImageView.image = UIImage()
-//    }
-//    
-//    override func prepareForReuse() {
-//        super.prepareForReuse()
-//        myLabel.text = nil
-//        myImageView.image = nil
-//    }
 }
